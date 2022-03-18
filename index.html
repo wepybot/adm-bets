@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Parions Sport</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" href="icon.png" />
+	</head>
+
+	<body>
+
+		<header class="centered">
+			<h1>Bienvenue sur le site officiel des paris d'AdM !</h1>
+		</header>
+
+		<article class="random centered">
+
+			<!-- La génération actuelle (toutes les couleurs au départ) -->
+			<div class="colorgen">
+				<div class="color blue"></div>
+				<div class="color red"></div>
+				<div class="color black"></div>
+				<div class="color yellow"></div>
+				<div class="color purple"></div>
+				<div class="color green"></div>
+			</div>
+
+			<!-- Les dés associés aux couleurs -->
+			<div id="dices">
+				<div class="dice" onclick="random(1);"><img src="1.png" /></div>
+				<div class="dice" onclick="random(2);"><img src="1.png" /></div>
+				<div class="dice" onclick="random(3);"><img src="1.png" /></div>
+				<div class="dice" onclick="random(4);"><img src="1.png" /></div>
+				<div class="dice" onclick="random(5);"><img src="1.png" /></div>
+				<div class="dice" onclick="random(6);"><img src="1.png" /></div>
+			</div>
+
+		</article>
+
+		<article id="canva" class="centered">
+			<!-- Le rectangle ou l'on voit les couleurs qui pop -->
+			<div id="piscine">
+			</div>
+		</article>
+
+		<article class="centered" id="generation">
+
+			<!-- Le bouton qui permet de choisir la nouvelle génération -->
+			<div id="gbutton" onclick="newgen();">G</div>
+
+			<!-- L'affichage de cette nouvelle génération -->
+			<div class="colorgen">
+				<div class="newgen color transparent"></div>
+				<div class="newgen color transparent"></div>
+				<div class="newgen color transparent"></div>
+				<div class="newgen color transparent"></div>
+				<div class="newgen color transparent"></div>
+				<div class="newgen color transparent"></div>
+			</div>
+
+			<!-- Le bouton pour relancer la simulation avec la nouvelle génération qui devient l'actuelle -->
+			<button id="rerun" onclick="rerun();">Relancer</button>
+		</article>
+
+		<nav>
+			<table>
+				<tbody id="tableau">
+
+					<tr>
+						<td></td>
+						<td class="color blue"></td>
+						<td class="color red"></td>
+						<td class="color black"></td>
+						<td class="color yellow"></td>
+						<td class="color purple"></td>
+						<td class="color green"></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</nav>
+
+		<script type="text/javascript" src="index.js"></script>
+
+	</body>
+</html>
+
+<!--
+	TODO:
+	X faire l'espace du canva
+	X faire l'article generation avec le bon espace pour les couleurs
+	X faire le JS du random
+		X l'associer avec le canva
+	X faire le JS du gen
+	- faire le JS pour relancer
+		la gen en haut
+		les dés
+		la piscine
+		la gen en bas
+
+	(- faire le tableau)
+	(- avec son JS)
+-->
